@@ -33,6 +33,7 @@ public class CajeroServiceImpl implements  CajeroService{
                 retirar.put("denominacion", cajero.getDenominaciones());
                 retirar.put("cantidad", cantidadUtilizada);
                 resultadoRetiro.add(retirar);
+                cajero.setCantidad(cajero.getCantidad() - cantidadUtilizada);
                 montoRestante -= cantidadUtilizada * cajero.getDenominaciones();
             }
             if (montoRestante == 0){break;}

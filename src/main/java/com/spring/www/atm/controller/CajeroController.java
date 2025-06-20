@@ -30,7 +30,7 @@ public class CajeroController {
         }
     }
 
-    @PostMapping(value = "/saldo-disponible")
+    @GetMapping(value = "/saldo-disponible")
     public ResponseEntity<?> montoDisponible(){
         return ResponseEntity.status(HttpStatus.OK).body(service.obtenerSaldoDisponible());
     }
